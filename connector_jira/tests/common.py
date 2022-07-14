@@ -82,7 +82,7 @@ def get_recorder(base_path=None, **kw):
         record_mode="once",
         cassette_library_dir=join(base_path, "fixtures/cassettes"),
         path_transformer=VCR.ensure_suffix(".yaml"),
-        match_on=["method", "path", "query"],
+        match_on=["method", "path"],
         filter_headers=["Authorization"],
         decode_compressed_response=True,
     )
